@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script>
+        window.onload = function(){
+            new Vue({
+                el: "#app",
+                data(){
+                    return {
+                        checked: true,
+                        checkList: []
+                    }
+                }
+            })
+        };
+    </script>
+</head>
+<body>
+    <div id="app">
+        <el-row>
+            <el-checkbox v-model="checked" disabled>备选项</el-checkbox>
+        </el-row>
+        <br>
+        <el-checkbox-group v-model="checkList">
+            <el-checkbox label="复选框 A"></el-checkbox>
+            <el-checkbox label="复选框 B"></el-checkbox>
+            <el-checkbox label="复选框 C"></el-checkbox>
+            <el-checkbox label="禁用" disabled></el-checkbox>
+            <el-checkbox label="选择且禁用" diabled></el-checkbox>
+        </el-checkbox-group>
+        <span>checkList: {{checkList}}</span>
+    </div>
+</body>
+</html>
