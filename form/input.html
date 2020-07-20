@@ -28,8 +28,11 @@
         <el-row :gutter="20">
             <el-col :span="2">
                 <el-input 
+                type="text"
                 v-model="input" 
-                placeholder="input please"></el-input>
+                placeholder="input please" 
+                maxleng="10"
+                show-word-limit></el-input>
             </el-col>
             <el-col :span="2">
                 <el-input 
@@ -52,10 +55,41 @@
         </el-row>
         <br>
         <el-row>
-            <el-input type="textarea" 
-            :rows="2" 
-            placeholder="input please" 
-            v-model="textarea"></el-input>
+            <el-col :span="8">
+                <el-input type="textarea" 
+                :rows="2" 
+                placeholder="input please" 
+                v-model="textarea"></el-input>
+            </el-col>
+        </el-row>
+        <br>
+        <el-row>
+            <el-col :span="4">
+                <el-input
+                placeholder="input please" 
+                v-model="input" prefix-icon="el-icon-search"></el-input>
+            </el-col>
+        </el-row>
+        <br>
+        <el-row>
+            <el-col :span="4">
+                <el-input placeholder="请输入内容" v-model="input">
+                    <template slot="prepend">Http://</template>
+                  </el-input>
+            </el-col>
+        </el-row>
+        <br>
+
+        <el-row>
+            <el-col :span="8">
+                <el-input
+                    type="text"
+                    placeholder="请输入内容"
+                    v-model="input"
+                    maxlength="10"
+                    show-word-limit
+                    >
+            </el-col>
         </el-row>
     </div>
 </body>
