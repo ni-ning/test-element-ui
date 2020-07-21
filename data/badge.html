@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script>
+        window.onload = function(){
+            new Vue({
+                el: "#app"
+            })
+        };
+    </script>
+    <style>
+        .item {
+          margin-top: 10px;
+          margin-right: 40px;
+        }
+        </style>
+</head>
+<body>
+    <div id="app">
+        <el-badge :value="200" class="item" :max="99">
+            <el-button size="small">评论</el-button>
+        </el-badge>
+        <el-badge is-dot class="item">
+            <el-button class="share-button" icon="el-icon-share" type="primary"></el-button>
+          </el-badge>
+    </div>
+</body>
+</html>
